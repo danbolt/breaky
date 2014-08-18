@@ -18,7 +18,7 @@
       "nextStep": "addSugar",
       "content":
       {
-        "mainText": "Add 3 tablespoons of melted butter. Add 2 eggs. Mix.",
+        "mainText": "Add 3 tablespoons of melted butter. Add 2 eggs. Whisk.",
         "tips": []
       }
     },
@@ -27,7 +27,7 @@
       "nextStep": "addMilk",
       "content":
       {
-        "mainText": "Add 1 tablespoon of sugar. Add 1/2 teaspoon vanilla. Mix.",
+        "mainText": "Add 1 tablespoon of sugar. Add 1/2 teaspoon vanilla. Whisk.",
         "tips": []
       }
     },
@@ -36,7 +36,7 @@
       "nextStep": "addFlour",
       "content":
       {
-        "mainText": "Add 1 cup of milk. Add 1/2 a cup of water. Mix.",
+        "mainText": "Add 1 cup of milk. Add 1/2 a cup of water. Whisk.",
         "tips": []
       }
     },
@@ -45,7 +45,7 @@
       "nextStep": "heatPan",
       "content":
       {
-        "mainText": "Add 1 cup of flour. Mix.",
+        "mainText": "Add 1 cup of flour. Whisk.",
         "tips": []
       }
     },

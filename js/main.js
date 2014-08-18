@@ -9,7 +9,7 @@ var requestFailed = function(jqxhr, textStatus, error)
 
 var updateView = function(text)
 {
-  $('#slideContent').html('<h1>' + text.toUpperCase() + '</h1>');
+  $('#slideContent').html('<p>' + text.toUpperCase().replace(/\. /g, '.<br /><br />') + '</p>');
 }
 
 var applyRecipeData = function(recipeData)
