@@ -10,12 +10,22 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
 
   <style>
-  #slideContent
+  #slidePanel
+  {
+    position:absolute;
+    width: 90%;
+  }
+
+  #instruction
   {
     font-family: "Lato", Calibri, sans-serif;
     font-weight: 700;
     line-height: 120%;
     font-size: 2em;
+    /*
+    border-style: solid;
+    border-width: 5px;
+    */
   }
 
   .tip
@@ -32,12 +42,15 @@
   .tipText
   {
     display: none;
+    overflow:hidden
   }
   </style>
 </head>
 <body>
-  <div id="slideContent"></div>
+  <div id=slidePanel>
+  <div id="instruction"></div>
   <div id="tips"></div>
+  <div>
 
   <script src="js/main.js"></script>
 </body>

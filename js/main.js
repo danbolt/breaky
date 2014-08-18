@@ -9,7 +9,7 @@ var requestFailed = function(jqxhr, textStatus, error)
 
 var updateView = function(text)
 {
-  $('#slideContent').html(text.toUpperCase().replace(/\. /g, '.<br /><br />'));
+  $('#instruction').html(text.toUpperCase().replace(/\. /g, '.<br /><br />'));
 }
 
 var updateTips = function(tipData)
@@ -64,7 +64,7 @@ var loadRecipe = function(recipeFileName)
   $.getJSON('recipes/' + recipeFileName + '.json').done(applyRecipeData).fail(requestFailed);
 }
 
-var nextState = function()
+var nextStateContent = function()
 {
   if (currentState != null && currentRecipe != null)
   {
@@ -81,8 +81,21 @@ var nextState = function()
   }
 }
 
+var slideStateOut = function()
+{
+  $('#slidePanel').animate({left: '100%'}, 750, slideStateIn);
+}
+
+var slideStateIn = function()
+{
+  nextStateContent();
+
+  $('#slidePanel').css('left', '-100%');
+  $('#slidePanel').animate({left: '0%'}, 750);
+}
+
 updateView('brekkie');
 
 loadRecipe('crepes');
 
-$('#slideContent').click(nextState);
+$('#instruction').click(slideStateOut);
