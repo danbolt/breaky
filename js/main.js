@@ -9,7 +9,37 @@ var requestFailed = function(jqxhr, textStatus, error)
 
 var updateView = function(text)
 {
-  $('#slideContent').html('<p>' + text.toUpperCase().replace(/\. /g, '.<br /><br />') + '</p>');
+  $('#slideContent').html(text.toUpperCase().replace(/\. /g, '.<br /><br />'));
+}
+
+var updateTips = function(tipData)
+{
+  $('#tips').empty();
+
+  if (tipData)
+  {
+    tipData.forEach(function(tip)
+    {
+      $('#tips').append('<div class=\'tip\'>' + tip.title.toUpperCase() + '<div class=\'tipText\'>' + tip.text + '</div></div>');
+    });
+  }
+
+  // need to reset hover functionality every time tips are added
+  $('.tip').hover(function()
+  {
+    $(this).find('.tipText').show(200);
+  },
+  function()
+  {
+    $(this).find('.tipText').hide(200);
+  });
+}
+
+var updateViewAndTips = function(text, tipData)
+{
+  updateView(text);
+
+  updateTips(tipData);
 }
 
 var applyRecipeData = function(recipeData)
@@ -26,7 +56,7 @@ var applyRecipeData = function(recipeData)
   currentRecipe = recipeData;
   currentState = currentRecipe.firstStep;
 
-  updateView(currentRecipe.steps[currentState].content.mainText);
+  updateViewAndTips(currentRecipe.steps[currentState].content.mainText, currentRecipe.steps[currentState].content.tips);
 }
 
 var loadRecipe = function(recipeFileName)
@@ -42,11 +72,11 @@ var nextState = function()
 
     if (currentState != null)
     {
-      updateView(currentRecipe.steps[currentState].content.mainText);
+      updateViewAndTips(currentRecipe.steps[currentState].content.mainText, currentRecipe.steps[currentState].content.tips);
     }
     else
     {
-      updateView('You\'re done!');
+      updateViewAndTips('You\'re done!', null);
     }
   }
 }

@@ -19,7 +19,13 @@
       "content":
       {
         "mainText": "Add 3 tablespoons of melted butter. Add 2 eggs. Whisk.",
-        "tips": []
+        "tips":
+        [
+          {
+            "title": "I hate whisking.",
+            "text": "You can use a food processor too. Just let the batter rest longer in later steps."
+          }
+        ]
       }
     },
     {
@@ -28,7 +34,17 @@
       "content":
       {
         "mainText": "Add 1 tablespoon of sugar. Add 1/2 teaspoon vanilla. Whisk.",
-        "tips": []
+        "tips":
+        [
+          {
+            "title": "What kind of sugar?",
+            "text": "We used white, but brown is cool too"
+          },
+          {
+            "title": "I still hate whisking.",
+            "text": "You better stop making crepes then."
+          }
+        ]
       }
     },
     {
@@ -37,7 +53,21 @@
       "content":
       {
         "mainText": "Add 1 cup of milk. Add 1/2 a cup of water. Whisk.",
-        "tips": []
+        "tips":
+        [
+          {
+            "title": "I like thicker crepes.",
+            "text": "Using less milk (around 2/3 of a cup) will make them more pancake-y."
+          },
+          {
+            "title": "What kind of milk do you use?",
+            "text": "I typically use 1%, but some people like 2%. I'm sure double-blind trials would indicate you don't have a preference."
+          },
+          {
+            "title": "I loathe whisking now.",
+            "text": "I take it the servants are on vacation today?"
+          }
+        ]
       }
     },
     {
