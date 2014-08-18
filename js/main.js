@@ -20,7 +20,7 @@ var updateTips = function(tipData)
   {
     tipData.forEach(function(tip)
     {
-      $('#tips').append('<div class=\'tip\'>' + tip.title.toUpperCase() + '<div class=\'tipText\'>' + tip.text + '</div></div>');
+      $('#tips').append('<div class=\'tip\'><div class=\'tipTitle\'>' + tip.title.toUpperCase() + '</div><div class=\'tipText\'>' + tip.text + '</div></div>');
     });
   }
 
@@ -83,6 +83,8 @@ var nextStateContent = function()
 
 var slideStateOut = function()
 {
+  if (currentState == null) { return; }
+
   $('#slidePanel').animate({left: '100%'}, 750, slideStateIn);
 }
 
@@ -98,4 +100,11 @@ updateView('brekkie');
 
 loadRecipe('crepes');
 
-$('#instruction').click(slideStateOut);
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+{
+  $('#slidePanel').click(slideStateOut);
+}
+else
+{
+  $(document).click(slideStateOut);
+}

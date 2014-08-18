@@ -13,7 +13,10 @@
   #slidePanel
   {
     position:absolute;
-    width: 90%;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   #instruction
@@ -21,11 +24,8 @@
     font-family: "Lato", Calibri, sans-serif;
     font-weight: 700;
     line-height: 120%;
-    font-size: 2em;
-    /*
-    border-style: solid;
-    border-width: 5px;
-    */
+    font-size: 3em;
+    margin-bottom: 1em;
   }
 
   .tip
@@ -35,14 +35,62 @@
     line-height: 100%;
     font-size: 1em;
     background-color: #56aac7;
-    border-radius: 25px;
+    /*border-radius: 20px;*/
     padding: 20px;
+    float: left;
+
+    margin-left: calc(25% / 16);
+
+    max-width: 25%;
+    min-width: 25%;
+  }
+
+  .tipTitle
+  {
+
   }
 
   .tipText
   {
     display: none;
-    overflow:hidden
+    overflow:hidden;
+    margin-top: 0.25em;
+  }
+
+  /* iPhone-width smartphones */
+  @media only screen and (min-width : 320px) and (max-width : 480px)
+  {
+    #instruction
+    {
+      font-size: 2em;
+    }
+
+    #slidePanel
+    {
+      position:absolute;
+      width: 80%;
+      margin-top: 5%;
+    }
+
+    .tip
+    {
+      font-family: "Lato", Calibri, sans-serif;
+      font-weight: 700;
+      line-height: 100%;
+      font-size: 1em;
+      background-color: #56aac7;
+      /* border-radius: 25px; */
+      padding: 20px;
+      float: none;
+
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom: 5%;
+
+      max-width: 85%;
+      min-width: 85%;
+    }
+
   }
   </style>
 </head>
