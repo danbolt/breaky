@@ -1,6 +1,12 @@
 var currentRecipe = null;
 var currentState = null;
 
+var requestFailed = function(jqxhr, textStatus, error)
+{
+  var err = textStatus + ", " + error;
+  console.log( "Request Failed: " + err );
+}
+
 var updateView = function(text)
 {
   $('#slideContent').html('<h1>' + text.toUpperCase() + '</h1>');
@@ -23,6 +29,11 @@ var applyRecipeData = function(recipeData)
   updateView(currentRecipe.steps[currentState].content.mainText);
 }
 
+var loadRecipe = function(recipeFileName)
+{
+  $.getJSON('recipes/' + recipeFileName + '.json').done(applyRecipeData).fail(requestFailed);
+}
+
 var nextState = function()
 {
   if (currentState != null && currentRecipe != null)
@@ -40,15 +51,8 @@ var nextState = function()
   }
 }
 
-var requestFailed = function(jqxhr, textStatus, error)
-{
-  var err = textStatus + ", " + error;
-  console.log( "Request Failed: " + err );
-}
-
-
 updateView('brekkie');
 
-$.getJSON('recipes/crepes.json').done(applyRecipeData).fail(requestFailed);
+loadRecipe('crepes');
 
 $('#slideContent').click(nextState);
