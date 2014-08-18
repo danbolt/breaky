@@ -3,7 +3,7 @@ var currentState = null;
 
 var updateView = function(text)
 {
-  $('#slideContent').html('<h1>' + text + '</h1>');
+  $('#slideContent').html('<h1>' + text.toUpperCase() + '</h1>');
 }
 
 var applyRecipeData = function(recipeData)
@@ -47,7 +47,7 @@ var requestFailed = function(jqxhr, textStatus, error)
 }
 
 
-$('#slideContent').html('<h1>BREAKY</h1>');
+updateView('brekkie');
 
 $.getJSON('recipes/crepes.json').done(applyRecipeData).fail(requestFailed);
 
