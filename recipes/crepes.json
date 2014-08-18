@@ -1,0 +1,98 @@
+{
+  "name": "Crepes",
+  "author": "Based off Alton Brown's Recipe: http://www.foodnetwork.com/recipes/alton-brown/crepes-recipe.html",
+  "firstStep": "getBowl",
+  "steps" :
+  [
+    {
+      "name": "getBowl",
+      "nextStep": "addButterEggs",
+      "content":
+      {
+        "mainText": "Get out a medium size mixing bowl.",
+        "tips": []
+      }
+    },
+    {
+      "name": "addButterEggs",
+      "nextStep": "addSugar",
+      "content":
+      {
+        "mainText": "Add 3 tablespoons of melted butter. Add 2 eggs. Mix.",
+        "tips": []
+      }
+    },
+    {
+      "name": "addSugar",
+      "nextStep": "addMilk",
+      "content":
+      {
+        "mainText": "Add 1 tablespoon of sugar. Add 1/2 teaspoon vanilla. Mix.",
+        "tips": []
+      }
+    },
+    {
+      "name": "addMilk",
+      "nextStep": "addFlour",
+      "content":
+      {
+        "mainText": "Add 1 cup of milk. Add 1/2 a cup of water. Mix.",
+        "tips": []
+      }
+    },
+    {
+      "name": "addFlour",
+      "nextStep": "heatPan",
+      "content":
+      {
+        "mainText": "Add 1 cup of flour. Mix.",
+        "tips": []
+      }
+    },
+    {
+      "name": "heatPan",
+      "nextStep": "letSit",
+      "content":
+      {
+        "mainText": "Set a small frying pan on medium heat. Add a little butter.",
+        "tips": []
+      }
+    },
+    {
+      "name": "letSit",
+      "nextStep": "fryCrepe",
+      "content":
+      {
+        "mainText": "Let the batter sit for 15 at room temp.",
+        "tips": []
+      }
+    },
+    {
+      "name": "fryCrepe",
+      "nextStep": "finishCrepe",
+      "content":
+      {
+        "mainText": "Pour 1/2 a cup of batter into the pan. Tilt the pan to spread it out. When it's browning on one side, flip it.",
+        "tips": []
+      }
+    },
+    {
+      "name": "finishCrepe",
+      "nextStep": "serve",
+      "content":
+      {
+        "mainText": "Once cooked on both sides, remove it and put it on a plate. Do this over and over for the rest of the batter.",
+        "tips": []
+      }
+    },
+    {
+      "name": "serve",
+      "nextStep": null,
+      "content":
+      {
+        "mainText": "Set plates and cutlery. Serve with stuff to go with the crepes.",
+        "tips": []
+      }
+    }
+  ]
+}
