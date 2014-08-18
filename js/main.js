@@ -47,7 +47,7 @@ var requestFailed = function(jqxhr, textStatus, error)
 }
 
 
-$('#slideContent').html('<h1>BREAKY</h1>');
+updateView('brekkie');
 
 $.getJSON('recipes/crepes.json').done(applyRecipeData).fail(requestFailed);
 
