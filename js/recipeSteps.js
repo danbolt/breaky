@@ -67,6 +67,10 @@ function RecipeStepper()
     currentRecipe = recipeData;
     currentState = currentRecipe.firstStep;
 
+    $('#slidePanel').empty();
+    $('#slidePanel').fadeIn(100);
+    $('#slidePanel').append('<div id="instruction"></div><div id="tips"></div>');
+
     updateViewAndTips(currentRecipe.steps[currentState].content.mainText, currentRecipe.steps[currentState].content.tips);
   }
 

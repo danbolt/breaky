@@ -16,6 +16,23 @@
   margin-bottom: 1em;
 }
 
+#logo
+{
+  font-family: "Lato", Calibri, sans-serif;
+  font-size: 4em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#tagline
+{
+  font-family: "Lato", Calibri, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+  display: none;
+}
+
 .tip
 {
   font-family: "Lato", Calibri, sans-serif;
@@ -51,6 +68,23 @@
   #instruction
   {
     font-size: 2em;
+  }
+
+  #logo
+  {
+    font-family: "Lato", Calibri, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #tagline
+  {
+    font-family: "Lato", Calibri, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
   }
 
   #slidePanel
