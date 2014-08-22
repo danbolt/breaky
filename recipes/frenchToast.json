@@ -1,0 +1,110 @@
+{
+  "name": "French Toast",
+  "author": "Based off Jan Bittner's Recipe: http://allrecipes.com/recipe/french-toast-i/",
+  "firstStep": "getBowl",
+  "steps" :
+  [
+    {
+      "name": "getBowl",
+      "nextStep": "addMilkEggs",
+      "content":
+      {
+        "mainText": "Get out a medium size mixing bowl.",
+        "tips": []
+      }
+    },
+    {
+      "name": "addMilkEggs",
+      "nextStep": "addSpices",
+      "content":
+      {
+        "mainText": "Add 2/3 cups of milk. Add 2 eggs. Beat.",
+        "tips":
+        [
+          {
+            "title": "What is beating?",
+            "text": "To mix rapidly in order to make a mixture smooth and light by incorporating as much air as possible."
+          }
+        ]
+      }
+    },
+    {
+      "name": "addSpices",
+      "nextStep": "heatPan",
+      "content":
+      {
+        "mainText": "Add 1/4 tsp of cinnamon. Add 1 tsp of vanilla. Beat.",
+        "tips":
+        [
+          {
+            "title": "What is beating?",
+            "text": "To mix rapidly in order to make a mixture smooth and light by incorporating as much air as possible."
+          }
+        ]
+      }
+    },
+    {
+      "name": "heatPan",
+      "nextStep": "dunkNFry",
+      "content":
+      {
+        "mainText": "Put a frying pan on medium heat. Add some oil.",
+        "tips": []
+      }
+    },
+    {
+      "name": "dunkNFry",
+      "nextStep": "dunkNFry",
+      "content":
+      {
+        "mainText": "Lightly soak a piece of bread in the mix. Fry it in the pan.",
+        "tips":
+        [
+          {
+            "title": "How long should I cook it for?",
+            "text": "Until both sides of the egg-bread are golden."
+          }
+        ]
+      }
+    },
+    {
+      "name": "dunkNFry",
+      "nextStep": "repeatSteps",
+      "content":
+      {
+        "mainText": "Lightly soak a slice of bread in the mix. Fry it in the pan.",
+        "tips":
+        [
+          {
+            "title": "How long should I cook it for?",
+            "text": "Until both sides of the egg-bread are golden."
+          }
+        ]
+      }
+    },
+    {
+      "name": "repeatSteps",
+      "nextStep": "serve",
+      "content":
+      {
+        "mainText": "Repeat until you're out of mix.",
+        "tips":
+        [
+          {
+            "title": "How much should I get?",
+            "text": "About six slices."
+          }
+        ]
+      }
+    },
+    {
+      "name": "serve",
+      "nextStep": null,
+      "content":
+      {
+        "mainText": "Serve with butter and/or maple syrup.",
+        "tips": []
+      }
+    }
+  ]
+}

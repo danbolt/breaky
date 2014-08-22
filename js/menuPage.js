@@ -4,7 +4,7 @@ function MainMenu()
 
   var recipeListing = [
                        {name:'Crepes', description: 'Thin pancakes that go nicely with fruit.', filename: 'crepes'},
-                       {name:'Crepes', description: 'Thin pancakes that go nicely with fruit.', filename: 'crepes'},
+                       {name:'French Toast', description: 'A sweet bread that\'s been soaked in eggs. Thanks, France!', filename: 'frenchToast'},
                        {name:'Crepes', description: 'Thin pancakes that go nicely with fruit.', filename: 'crepes'},
                        {name:'Crepes', description: 'Thin pancakes that go nicely with fruit.', filename: 'crepes'},
                        {name:'Crepes', description: 'Thin pancakes that go nicely with fruit.', filename: 'crepes'},
