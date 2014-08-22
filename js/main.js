@@ -8,10 +8,16 @@ var requestFailed = function(jqxhr, textStatus, error)
 
 var finishTitleFadeout = function()
 {
-  recipeStepper.loadRecipe('crepes');
+  mainMenu.transitionIn();
+}
+
+var finishMenuFadeout = function(recipeFileName)
+{
+  recipeStepper.loadRecipe(recipeFileName);
 }
 
 var titleArea = new TitleArea();
+var mainMenu = new MainMenu();
 var recipeStepper = new RecipeStepper();
 
 titleArea.fadeTitleIn();

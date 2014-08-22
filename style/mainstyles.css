@@ -1,3 +1,4 @@
+/* slidePanel is the main class we move around */
 #slidePanel
 {
   position:absolute;
@@ -5,15 +6,6 @@
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
-}
-
-#instruction
-{
-  font-family: "Lato", Calibri, sans-serif;
-  font-weight: 700;
-  line-height: 120%;
-  font-size: 3em;
-  margin-bottom: 1em;
 }
 
 #logo
@@ -33,6 +25,36 @@
   display: none;
 }
 
+.recipeListing
+{
+  font-family: "Lato", Calibri, sans-serif;
+  font-size: 1em;
+  background-color: #56aac7;
+  padding: 15px;
+  margin: 20px;
+  margin-left: 10px;
+  float: left;
+}
+
+.recipeTitle
+{
+  font-size: 2em;
+}
+
+.recipeDescription
+{
+  font-size: 1em;
+}
+
+#instruction
+{
+  font-family: "Lato", Calibri, sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
 .tip
 {
   font-family: "Lato", Calibri, sans-serif;
@@ -40,7 +62,6 @@
   line-height: 100%;
   font-size: 1em;
   background-color: #56aac7;
-  /*border-radius: 20px;*/
   padding: 20px;
   float: left;
 
@@ -63,13 +84,8 @@
 }
 
 /* iPhone-width smartphones */
-@media only screen and (min-width : 320px) and (max-width : 480px)
+@media only screen and (min-width : 320px) and (max-width : 500px)
 {
-  #instruction
-  {
-    font-size: 2em;
-  }
-
   #logo
   {
     font-family: "Lato", Calibri, sans-serif;
@@ -85,6 +101,11 @@
     text-align: center;
     vertical-align: middle;
     display: none;
+  }
+
+  #instruction
+  {
+    font-size: 2em;
   }
 
   #slidePanel
