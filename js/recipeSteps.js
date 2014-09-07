@@ -6,7 +6,8 @@ function RecipeStepper()
 
   var slideStateOut = function()
   {
-    if (currentState == null) { return; }
+    if (currentRecipe == null) { return; }
+    if (currentState == null) { $('#backbutton').css('visibility', 'visible');  return; }
 
     $('#slidePanel').animate({left: '100%'}, 750, slideStateIn);
   }
