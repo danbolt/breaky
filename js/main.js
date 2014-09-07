@@ -22,11 +22,6 @@ var recipeStepper = new RecipeStepper();
 
 titleArea.fadeTitleIn();
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-{
-  $('#slidePanel').click(recipeStepper.nextState);
-}
-else
-{
-  $(document).click(recipeStepper.nextState);
-}
+$('#slidePanel').click(function() {$('#backbutton').css('visibility', 'hidden'); recipeStepper.nextState();});
+
+$('#backbutton').click(function() {$(this).css('visibility', 'hidden'); recipeStepper.prevState();});

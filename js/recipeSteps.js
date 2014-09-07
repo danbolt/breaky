@@ -1,6 +1,7 @@
 function RecipeStepper()
 {
   var currentRecipe = null;
+  var previousStates = [];
   var currentState = null;
 
   var slideStateOut = function()
@@ -10,12 +11,24 @@ function RecipeStepper()
     $('#slidePanel').animate({left: '100%'}, 750, slideStateIn);
   }
 
-  var slideStateIn = function()
+  var slideStateIn = function(prev)
   {
-    nextStateContent();
+    if (prev == undefined) prev = false;
 
-    $('#slidePanel').css('left', '-100%');
-    $('#slidePanel').animate({left: '0%'}, 750);
+    if (!prev)
+    {
+      nextStateContent();
+
+      $('#slidePanel').css('left', '-100%');
+      $('#slidePanel').animate({left: '0%'}, 750, function() { if(previousStates.length > 0)  { $('#backbutton').css('visibility', 'visible'); } });
+    }
+    else
+    {
+      prevStateContent();
+
+      $('#slidePanel').css('left', '100%');
+      $('#slidePanel').animate({left: '0%'}, 750, function() { if(previousStates.length > 0)  { $('#backbutton').css('visibility', 'visible'); } });
+    }
   }
 
   var updateView = function(text)
@@ -83,6 +96,7 @@ function RecipeStepper()
   {
     if (currentState != null && currentRecipe != null)
     {
+      previousStates.push(currentState);
       currentState = currentRecipe.steps[currentState].nextStep;
 
       if (currentState != null)
@@ -96,6 +110,24 @@ function RecipeStepper()
     }
   }
 
+  var prevStateContent = function()
+  {
+    currentState = previousStates.pop();
+
+    updateViewAndTips(currentRecipe.steps[currentState].content.mainText, currentRecipe.steps[currentState].content.tips);
+  }
+
+  var goBack = function()
+  {
+    if (previousStates.length < 1)
+    {
+      return;
+    }
+
+    $('#slidePanel').animate({left: '-100%'}, 750, function() { slideStateIn(true);});
+  }
+
   this.loadRecipe = loadRecipe;
   this.nextState = slideStateOut;
+  this.prevState = goBack;
 }
